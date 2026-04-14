@@ -5,8 +5,8 @@ import cv2 as cv
 # ----------------------------
 # User settings
 # ----------------------------
-MARKER_LENGTH_M = 0.050   # 28 mm
-CAMERA_INDEX = 1
+MARKER_LENGTH_M = 0.050   # 50 mm
+CAMERA_INDEX = 0
 WINDOW_NAME = "frame"
 
 
@@ -64,7 +64,7 @@ def main():
     camera_matrix = np.load("mtx.npy")
     dist_coeffs = np.load("dist.npy")
 
-    aruco_dict = cv.aruco.getPredefinedDictionary(cv.aruco.DICT_APRILTAG_16h5)
+    aruco_dict = cv.aruco.getPredefinedDictionary(cv.aruco.DICT_4X4_100)
     aruco_params = cv.aruco.DetectorParameters()
     detector = cv.aruco.ArucoDetector(aruco_dict, aruco_params)
 

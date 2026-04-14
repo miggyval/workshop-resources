@@ -3,7 +3,7 @@ import numpy as np
 
 
 
-def callback(event,x,y,flags,param):
+def callback(event, x, y, flags,param):
     if event == cv.EVENT_LBUTTONDOWN:
         # Print the BGR values of the image
         print(param[y, x])

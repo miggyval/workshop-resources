@@ -5,7 +5,10 @@ import cv2 as cv
 
 from perlin_numpy import generate_fractal_noise_2d
 
-cap = cv.VideoCapture(0)
+# Camera Settings
+CAMERA_INDEX = 0
+
+cap = cv.VideoCapture(CAMERA_INDEX)
 
 # https://en.wikipedia.org/wiki/Kernel_(image_processing)
 

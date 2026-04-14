@@ -1,6 +1,9 @@
 import numpy as np
 import cv2 as cv
 
+# Camera Settings
+CAMERA_INDEX = 0
+
 # Chessboard settings
 CHESSBOARD_SIZE = (9, 7)
 
@@ -19,7 +22,7 @@ objp[:, :2] = np.mgrid[0:CHESSBOARD_SIZE[0], 0:CHESSBOARD_SIZE[1]].T.reshape(-1,
 objpoints = []
 imgpoints = []
 
-cap = cv.VideoCapture(1)
+cap = cv.VideoCapture(CAMERA_INDEX)
 
 if not cap.isOpened():
     raise RuntimeError("Cannot open camera")
